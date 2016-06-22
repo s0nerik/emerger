@@ -16,8 +16,8 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'codenarc'
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
+//apply plugin: 'maven'
+//apply plugin: 'maven-publish'
 
 //   _____                            _                 _
 //  |  __ \                          | |               (_)
@@ -87,34 +87,34 @@ repositories {
     jcenter()
 }
 
-publishing {
-    publications {
-        mavenCustom(MavenPublication) {
-            groupId 'net.kaleidos.gradle.plugins'
-            artifactId 'emerger'
-            version '0.0.2'
-
-            from components.java
-
-            artifact sourcesJar
-        }
-    }
-}
-
-bintray {
-    user = bintrayUser
-    key = bintrayKey
-
-    publish = true
-    publications = ['mavenCustom']
-    pkg {
-        name = 'emerger'
-        repo = "maven"
-        version {
-            name = '0.0.2'
-        }
-    }
-}
+//publishing {
+//    publications {
+//        mavenCustom(MavenPublication) {
+//            groupId 'net.kaleidos.gradle.plugins'
+//            artifactId 'emerger'
+//            version '0.0.2'
+//
+//            from components.java
+//
+//            artifact sourcesJar
+//        }
+//    }
+//}
+//
+//bintray {
+//    user = bintrayUser
+//    key = bintrayKey
+//
+//    publish = true
+//    publications = ['mavenCustom']
+//    pkg {
+//        name = 'emerger'
+//        repo = "maven"
+//        version {
+//            name = '0.0.2'
+//        }
+//    }
+//}
 
 //   _____          _                    _______        _
 //  / ____|        | |                  |__   __|      | |
